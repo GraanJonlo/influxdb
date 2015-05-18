@@ -1,16 +1,18 @@
-# What is Elasticsearch?
+# What is InfluxDB?
 
-Elasticsearch is a search server based on Lucene. It provides a distributed, multitenant-capable full-text search engine with a RESTful web interface and schema-free JSON documents. Elasticsearch is developed in Java and is released as open source under the terms of the Apache License. Elasticsearch is the second most popular enterprise search engine.
+InfluxDB is a time series, metrics, and analytics database. It’s written in Go and has no external dependencies. That means once you install it there’s nothing else to manage (like Redis, ZooKeeper, HBase, or whatever).
 
-> [wikipedia.org/wiki/Elasticsearch](https://en.wikipedia.org/wiki/Elasticsearch)
+InfluxDB is targeted at use cases for DevOps, metrics, sensor data, and real-time analytics.
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/master/elasticsearch/logo.png)
+> [influxdb.com](http://influxdb.com/)
+
+![logo](http://influxdb.com/images/influxdb-light400.png)
 
 # How to use this image
 
-## start an elasticsearch instance
+## start an influxdb instance
 
-    docker run --name elasticsearch [-p 9200:9200 -p 9300:9300] [-v /some/directory:/data] -d graanjonlo/elasticsearch[:tag]
+    docker run -d --name influxdb [-p 8083:8083 -p 8086:8086 -p 8090:8090 -p 8099:8099] [-v /some/directory:/data] -d graanjonlo/influxdb[:tag]
 
-This image includes `EXPOSE 9200` and `9300`, so standard container linking will make it automatically available to the linked containers. It also includes `VOLUME ["/data"]` so you can mount a data volume.
+This image includes `EXPOSE 8083, 8086, 8090 and 8099`, so standard container linking will make it automatically available to the linked containers. It also includes `VOLUME ["/data"]` so you can mount a data volume.
 
