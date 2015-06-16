@@ -12,7 +12,11 @@ InfluxDB is targeted at use cases for DevOps, metrics, sensor data, and real-tim
 
 ## start an influxdb instance
 
-    docker run -d --name influxdb [-p 8083:8083 -p 8086:8086 -p 8090:8090 -p 8099:8099] [-v /some/directory:/data] -d graanjonlo/influxdb[:tag]
+    docker run -d --name influxdb [-p 8083:8083 -p 8086:8086 -p 8088:8088] [-v /some/directory:/data] -d graanjonlo/influxdb[:tag]
 
-This image includes `EXPOSE 8083, 8086, 8090 and 8099`, so standard container linking will make it automatically available to the linked containers. It also includes `VOLUME ["/data"]` so you can mount a data volume.
+This image includes `EXPOSE 8083, 8086 and 8088`, so standard container linking will make it automatically available to the linked containers. It also includes `VOLUME ["/data"]` so you can mount a data volume.
+
+## connect to running instance
+
+    docker exec -t -i influxdb /opt/influxdb/influx
 
