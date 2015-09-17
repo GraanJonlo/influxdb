@@ -8,7 +8,7 @@ RUN \
 
 RUN \
   cd /tmp && \
-  wget -O influxdb.deb https://s3.amazonaws.com/influxdb/influxdb_0.9.3_amd64.deb && \
+  wget -O influxdb.deb https://s3.amazonaws.com/influxdb/influxdb_0.9.4.1_amd64.deb && \
   dpkg -i influxdb.deb && \
   rm -rf /tmp/* && \
   rm /etc/init.d/influxdb
