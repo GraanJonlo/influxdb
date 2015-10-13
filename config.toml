@@ -34,6 +34,9 @@ reporting-disabled = false
 [data]
   dir = "/data/db"
 
+  wal-dir = "/data/wal"
+  wal-enable-logging = true
+
 ###
 ### [cluster]
 ###
