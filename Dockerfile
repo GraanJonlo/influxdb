@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.16
+FROM phusion/baseimage:0.9.18
 
 MAINTAINER Andy Grant <andy.a.grant@gmail.com>
 
@@ -8,7 +8,7 @@ RUN \
 
 RUN \
   cd /tmp && \
-  wget -O influxdb.deb https://s3.amazonaws.com/influxdb/influxdb_0.8.8_amd64.deb && \
+  wget -O influxdb.deb http://get.influxdb.org.s3.amazonaws.com/influxdb_0.8.9_amd64.deb && \
   dpkg -i influxdb.deb && \
   rm -rf /tmp/* && \
   rm /etc/init.d/influxdb
