@@ -18,5 +18,5 @@ This image includes `EXPOSE 8083, 8086 and 8088`, so standard container linking 
 
 ## connect to running instance
 
-    docker exec -t -i influxdb /opt/influxdb/influx
+    docker exec -t -i influxdb /usr/bin/influx
 
