@@ -8,7 +8,7 @@ RUN \
 
 RUN \
   cd /tmp && \
-  wget -O influxdb.deb https://s3.amazonaws.com/influxdb/influxdb_0.10.1-1_amd64.deb && \
+  wget -O influxdb.deb https://s3.amazonaws.com/influxdb/influxdb_0.10.2-1_amd64.deb && \
   dpkg -i influxdb.deb && \
   rm -rf /tmp/* && \
   rm /etc/init.d/influxdb
@@ -25,4 +25,3 @@ EXPOSE 8090
 EXPOSE 8099
 
 CMD ["/sbin/my_init", "--quiet"]
-
