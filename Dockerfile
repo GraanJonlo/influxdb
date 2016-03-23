@@ -8,7 +8,7 @@ RUN \
 
 RUN \
   cd /tmp && \
-  wget -O influxdb.deb https://s3.amazonaws.com/influxdb/influxdb_0.10.3-1_amd64.deb && \
+  wget -O influxdb.deb https://s3.amazonaws.com/influxdb/influxdb_0.11.0-1_amd64.deb && \
   dpkg -i influxdb.deb && \
   rm -rf /tmp/* && \
   rm /etc/init.d/influxdb
@@ -21,7 +21,7 @@ ADD config.toml /etc/service/influxdb/config.toml
 
 EXPOSE 8083
 EXPOSE 8086
-EXPOSE 8090
-EXPOSE 8099
+EXPOSE 8088
+EXPOSE 8091
 
 CMD ["/sbin/my_init", "--quiet"]
