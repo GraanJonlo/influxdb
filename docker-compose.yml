@@ -1,0 +1,16 @@
+version: '2'
+services:
+  influxdb:
+    image: graanjonlo/influxdb:0.11.1
+    ports:
+     - "8083:8083"
+     - "8086:8086"
+     - "8088:8088"
+     - "8091:8091"
+    expose:
+     - "8083"
+     - "8086"
+     - "8088"
+     - "8091"
+    volumes:
+     - "/home/andy/docker/data/influxdb:/data"
