@@ -1,5 +1,4 @@
 #!/bin/bash
-
 chown influxdb:influxdb /data
 chmod 0755 /data
 
