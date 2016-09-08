@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.18
+FROM phusion/baseimage:0.9.19
 
 MAINTAINER Andy Grant <andy.a.grant@gmail.com>
 
@@ -17,7 +17,7 @@ RUN \
   wget -O influxdb.deb https://dl.influxdata.com/influxdb/releases/influxdb_0.13.0_amd64.deb && \
   dpkg -i influxdb.deb && \
   rm -rf /tmp/* && \
-  rm /etc/init.d/influxdb
+  systemctl disable influxdb.service
 
 VOLUME ["/data"]
 
