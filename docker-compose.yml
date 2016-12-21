@@ -1,7 +1,7 @@
 version: '2'
 services:
   influxdb:
-    image: graanjonlo/influxdb:1.0.1
+    image: graanjonlo/influxdb:1.0.2
     ports:
      - "8083:8083"
      - "8086:8086"

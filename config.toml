@@ -182,7 +182,9 @@ hostname = "localhost"
 
 [subscriber]
   enabled = true
-  http-timeout = "30s"
+  # http-timeout = "30s"
+  # write-concurrency = 40
+  # write-buffer-size = 1000
 
 ###
 ### [[graphite]]
