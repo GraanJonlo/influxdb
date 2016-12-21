@@ -14,7 +14,7 @@ RUN rm -rf /var/lib/apt/lists/*
 
 RUN \
   cd /tmp && \
-  wget -O influxdb.deb https://dl.influxdata.com/influxdb/releases/influxdb_1.0.0_amd64.deb && \
+  wget -O influxdb.deb https://dl.influxdata.com/influxdb/releases/influxdb_1.0.1_amd64.deb && \
   dpkg -i influxdb.deb && \
   rm -rf /tmp/* && \
   systemctl disable influxdb.service
